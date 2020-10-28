@@ -5,12 +5,7 @@ import { CATEGORIES } from "../data/dummy-data";
 
 const CategoryGridTile = (props) => {
   return (
-    <TouchableOpacity
-      style={styles.gridItem}
-      onPress={() => {
-        props.onSelect;
-      }}
-    >
+    <TouchableOpacity style={styles.gridItem} onPress={props.onSelect}>
       <View
         style={{ ...styles.container, ...{ backgroundColor: props.color } }}
         numberOfLines={2}
@@ -26,6 +21,8 @@ const styles = StyleSheet.create({
     flex: 1,
     margin: 15,
     height: 150,
+    borderRadius: 10,
+    elevation: 5,
   },
   container: {
     flex: 1,
@@ -34,7 +31,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.26,
     shadowOffset: { width: 0, height: 2 },
     shadowRadius: 10,
-    elevation: 3,
+
     padding: 15,
     justifyContent: "flex-end",
     alignItems: "flex-end",
